@@ -1,8 +1,8 @@
-package com.functions.prime_no;
+package com.functions;
 
 import java.util.Scanner;
 
-public class _finder {
+public class prime_finder {
     // q. 7
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
