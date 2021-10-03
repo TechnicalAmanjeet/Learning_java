@@ -4,11 +4,13 @@ public class search_in_string {
     public static void main(String[] args) {
         String str = "amanjeet_riya";
         char key = '_';
+
         // return 1 if key is found else return 0;
         boolean output = search(str,key);
+        System.out.println(output);
+
         // return index of key if found else return -1;
         int outputIndex = search_index(str,key);
-        System.out.println(output);
         System.out.println("Index of "+key+" is "+ outputIndex);
     }
 

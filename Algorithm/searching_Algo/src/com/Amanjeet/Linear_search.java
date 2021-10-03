@@ -2,21 +2,26 @@ package com.Amanjeet;
 
 public class Linear_search {
     public static void main(String[] args) {
-        int[] arr = {1,2,4,-5,45,45,4534,34,2,64,56}; // input array.
+        // input array.
+        int[] arr = {1,2,4,-5,45,45,4534,34,2,64,56};
         int key = 64;
+
         // return 1 if element found, 0 if element is not in array
         boolean output = linear_search(arr,key);
+        System.out.println(output);
+
         // return index of key if found else return -1;
         int outputIndex = search_index(arr,key);
+        System.out.println(key+" is at "+outputIndex);
+
         // searching element in interval. output the result.
         int indexFirst = 0,indexLast = arr.length;
         int outputInInterval = search_in_interval(arr,key,indexFirst,indexLast);
+
         // return minimum and maximum element of an array.
         // min_max[0]=minimum & min_max[1]=maximum
         int[] min_max = min_and_max(arr);
         System.out.println("min and max of an array is "+min_max[0]+" and "+min_max[1]+" respectively.");
-        System.out.println(output);
-        System.out.println(key+" is at "+outputIndex);
 
     }
 
