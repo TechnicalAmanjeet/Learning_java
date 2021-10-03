@@ -23,10 +23,11 @@ public class Binary_search {
     }
 
     private static int orderAgnosticBinarySearch(int[] arr, int key) {
-        int start=0,mid,end=arr.length;
+        int start=0,mid,end=arr.length-1;
         if(arr[end-1]>=arr[start]){
             while (start<end){
-                mid = (start+end)/2;
+                //mid = (start+end)/2;
+                mid = start + (end-start)/2;
                 if(key>arr[mid]) start=mid+1;
                 else if(key<arr[mid]) end=mid-1;
                 else return mid;
@@ -34,7 +35,8 @@ public class Binary_search {
         }
         else {
             while (start<end){
-                mid = (start+end)/2;
+//                mid = (start+end)/2;
+                mid = start + (end-start)/2;
                 if(key>arr[mid]) end=mid-1;
                 else if(key<arr[mid]) start=mid+1;
                 else return mid;
@@ -44,9 +46,10 @@ public class Binary_search {
     }
 
     private static int binarySearchIndex(int[] arr_ascending, int key) {
-        int start=0,end=arr_ascending.length,mid;
+        int start=0,end=arr_ascending.length-1,mid;
         while (start<end){
-            mid = (start+end)/2;
+//            mid = (start+end)/2;
+            mid = start + (end-start)/2;
             if(key>arr_ascending[mid]) start=mid+1;
             else if(key<arr_ascending[mid]) end=mid-1;
             else return mid;
@@ -57,7 +60,8 @@ public class Binary_search {
     private static boolean binarySearch(int[] arr, int key) {
         int start=0,end=arr.length,mid;
         while (start<end){
-            mid = (start+end)/2;
+//            mid = (start+end)/2;
+            mid = start + (end-start)/2;
             if(key>arr[mid]) start=mid+1;
             else if(key<arr[mid]) end=mid-1;
             else return true;
